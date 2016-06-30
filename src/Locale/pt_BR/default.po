@@ -1,0 +1,53 @@
+msgid "Actions"
+msgstr "Ações"
+
+msgid "Id"
+msgstr "#"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Attachment"
+msgstr "Anexo"
+
+msgid "Created"
+msgstr "Data de Criação"
+
+msgid "Modified"
+msgstr "Data de Modificação"
+
+msgid "New Article"
+msgstr "Nova Notícia"
+
+msgid "previous"
+msgstr "anterior"
+
+msgid "next"
+msgstr "próximo"
+
+msgid "List Articles"
+msgstr "Listar Notícias"
+
+msgid "Add Article"
+msgstr "Adicionar Notícia"
+
+msgid "Content"
+msgstr "Conteúdo"
+
+msgid "Excerpt"
+msgstr "Resumo"
+
+msgid "Submit"
+msgstr "Enviar"
+
+msgid "Are you sure you want to delete # {0}?"
+msgstr "Você tem certeza que quer fazer isto? Esta ação é PERMANENTE!"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Delete"
+msgstr "Excluir"
+
+msgid "Edit Article"
+msgstr "Editar Notícia"

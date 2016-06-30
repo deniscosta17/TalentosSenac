@@ -1,0 +1,465 @@
+body
+  color #19305A
+  background #EFDFD0
+
+html, body
+  height 100%
+
+#wrap
+  min-height 100%
+
+#main
+  overflow auto
+  padding-bottom 190px
+
+#footer
+  position relative
+  margin-top -190px
+  height 190px
+  clear both
+
+body:before
+  content ""
+  height 100%
+  float left
+  width 0
+  margin-top -32767px
+
+// Placeholders
+::-webkit-input-placeholder
+  color #9FA1AB
+
+:-moz-placeholder
+  color #9FA1AB
+
+::-moz-placeholder
+  color #9FA1AB
+
+:-ms-input-placeholder
+  color #9FA1AB
+
+.page-title
+  font-size 46px
+  text-transform uppercase
+  font-family 'Roboto', sans-serif
+  line-height 52px
+  padding-bottom 10px
+  text-align center
+  margin-top 40px !important
+
+.orange-line
+  clear both
+  display block
+  width 40px
+  height 7px
+  background rgba(243, 146, 46, 1)
+  margin 0px auto
+  margin-top 12px
+
+.border-orange
+  border-left 1px solid rgba(243, 146, 46, 1) !important
+  border-right 1px solid rgba(243, 146, 46, 1) !important
+
+.container-geral
+  margin-top 40px
+  margin-bottom 40px
+
+.onblur
+  -webkit-filter blur(2px)
+  -moz-filter blur(2px)
+  -ms-filter blur(2px)
+  -o-filter blur(2px)
+  filter blur(2px)
+
+.btn-pesquisar
+  position absolute
+  right 10px
+  top 6px
+  background transparent
+  border none !important
+  font-size 24px
+  color #f3922e
+
+hr
+  border none !important
+  border-bottom 1px solid #f3922e !important
+
+.form-title
+  text-transform uppercase
+  color #f3922e
+  font-weight 300
+  font-family 'Roboto',sans-serif
+  font-size 24px
+
+.form
+  position relative
+
+  input[type="text"],
+  textarea
+    background transparent !important
+    border 2px solid #19305a
+    padding 22px
+    font-size 18px
+    font-family 'Roboto', sans-serif
+    text-transform uppercase
+    border-radius 10px
+    &:focus
+      background #19305a !important
+      color #FFF !important
+
+  select
+    background transparent !important
+    border 2px solid #19305a
+    padding 0px
+    font-size 18px
+    font-family 'Roboto', sans-serif
+    text-transform uppercase
+    border-radius 10px
+    color #19305a
+    height 50px
+    padding-left 12px
+
+  .btn-primary
+    background #19305A
+    font-family 'Roboto', sans-serif
+    text-transform uppercase
+    color #FFF
+    font-size 22px
+    font-weight bold
+    border none !important
+    border-radius 12px
+    &:hover
+      background #F68B1F
+
+  .btn-success
+    background #F68B1F
+    font-family 'Roboto', sans-serif
+    text-transform uppercase
+    color #FFF
+    font-size 22px
+    font-weight bold
+    border none !important
+    border-radius 12px
+    &:hover
+      background #19305A
+
+.content-item-gallery
+  margin 15px 0
+
+.item-gallery
+  cursor pointer
+  overflow hidden
+  margin 0
+  padding 0
+  position relative
+  display block
+
+.item-gallery:hover figcaption
+  display block
+  opacity 1
+  top 0
+
+figcaption
+  display none
+  position absolute
+  height 100%
+  width 100%
+  background-color rgba(246,139,31, 0.8)
+  color #fff
+  -webkit-transition all .9s ease
+  -moz-transition all .9s ease
+  -o-transition all .9s ease
+  -ms-transition all .9s ease
+  transition all .9s ease
+
+.item-gallery img
+  -webkit-transition all 1.5s
+  -moz-transition all 1.5s
+  -o-transition all 1.5s
+  -ms-transition all 1.5s
+  transition all 1.5s
+  -webkit-transition-delay 0.2s
+  -moz-transition-delay 0.2s
+  -o-transition-delay 0.2s
+  -ms-transition-delay 0.2s
+  transition-delay 0.2s
+
+.item-gallery:hover img
+  -webkit-transform scale(1.1)
+  -moz-transform scale(1.1)
+  -o-transform scale(1.1)
+  -ms-transform scale(1.1)
+  transform scale(1.1)
+
+figcaption p
+  font-family Arial
+  padding 20px 50px
+  color #fff
+  margin-bottom 0
+  position relative
+  left 100%
+  font-size 14px
+
+.item-gallery:hover p
+  left 0
+
+figcaption a
+  text-align center
+  padding 4px 10px
+  text-decoration none
+
+.resultados
+  margin 0px
+  padding 0px
+
+  li
+    list-style none
+
+  li.header-resultados
+    text-transform uppercase
+    font-family 'Roboto', sans-serif
+    font-weight bold
+    font-size 22px
+    padding-bottom 6px
+    border-bottom 1px solid rgba(246,139,31, 1)
+
+  li.linha-resultado
+    display inline-block
+    width 100%
+    height 40px
+    line-height 40px
+    clear both
+    border-bottom 1px solid rgba(246,139,31, 1)
+
+  li.linha-resultado .col-lg-2:first-child
+    font-weight bold
+    font-size 22px
+    color rgba(246,139,31, 1)
+
+  li.linha-resultado.par
+    background #FAEEE4
+
+.item-oportunidade
+  display inline-block
+  height 316px
+  border-bottom 1px solid rgba(246,139,31, 1)
+
+  .col-icone
+    height 300px
+    line-height 300px
+    text-align center
+    background #19305a
+    color rgba(246,139,31, 1)
+    font-size 40px
+
+  .col-infos
+    height 300px
+    position relative
+
+    .categoria
+      margin-bottom 0px !important
+      color rgba(246,139,31, 1)
+
+    .localizacao
+      position absolute
+      left 20px
+      bottom 0px
+      margin-bottom 0px !important
+      font-size 16px
+
+    .titulo
+      margin-top 0px !important
+      color rgba(246,139,31, 1)
+      font-weight bold
+
+.btn-faq
+  background transparent
+  border 2px solid rgba(246,139,31, 1)
+  border-radius 10px
+  text-transform uppercase
+  font-family 'Roboto', sans-serif
+  font-size 18px
+  color rgba(246,139,31, 1)
+
+.btn-faq.ativo
+  background rgba(246,139,31, 1)
+  border none
+  text-transform uppercase
+  font-family 'Roboto', sans-serif
+  font-size 18px
+  color #FFF
+
+.pos-r
+    position relative
+
+.btn-badge
+  position fixed
+  right 5%
+  top 80px
+  z-index 10
+
+  img
+    height 180px
+
+.container-depoimentos
+  height 600px
+  background url("../img/bg-depoimentos.jpg") no-repeat
+
+#carouselDepoimentos
+  .depoimento-frase
+    color #EFDFD0
+    font-style italic
+    font-family 'Roboto', sans-serif
+    font-size 28px
+    margin-top 150px
+
+  .item
+    height 300px !important
+
+  .carousel-indicators
+    position absolute
+    left 50%
+    bottom -60px
+
+  .depoimento-autor
+    color #1B3760
+    font-family 'Roboto', sans-serif
+    font-size 24px
+    margin-top 30px
+    font-weight bold
+
+  .carousel-indicators li
+    background #19305A !important
+    border none !important
+
+  .carousel-indicators .active
+    background #F68B1F !important
+    border none !important
+
+.grid-item
+  width 48%
+
+.grid-item--width2
+  width 66% !important
+
+.orange-title
+  text-transform uppercase
+  font-family 'Roboto', sans-serif
+  font-size 24px
+  font-weight 300
+  margin-top 0px
+  margin-bottom 30px
+  color #f3922e
+
+select.form-control
+  -webkit-appearance none
+  -moz-appearance none
+  appearance none
+  -moz-appearance none
+  text-indent 0.01px
+  text-overflow ''
+
+.arrow-orange
+  top 43%
+  right 16px
+  border solid transparent
+  content " "
+  height 0
+  width 0
+  position absolute
+  pointer-events none
+  border-color rgba(136, 183, 213, 0)
+  border-top-color #f3922e
+  border-width 11px
+  margin-left -10px
+
+.icone-relogio
+  font-size 50px
+  color #F68B1F
+  padding 20px
+  border 1px solid #F68B1F
+  border-radius 100%
+
+.p-horario
+  font-size 20px
+  font-weight 300
+  font-family 'Roboto', sans-serif
+  color #f3922e
+  margin-bottom 50px
+
+.btn-senac
+  padding 0px
+  text-align center
+  color #f3922e
+
+#steps
+  float left
+  display inline
+  width 100%
+  clear both
+  overflow hidden
+
+.step
+  display none
+  float left
+  margin-left 1000px
+  width 100%
+
+.step-1
+  display inline-block
+  margin-left 0px
+
+.img-galeria
+  width 100%
+  height 196px
+  background-color #EEE1D4
+
+.questions
+  a
+    width 40% !important
+    margin-right 20px
+    background #f3922e !important
+
+label.error
+  color red !important
+  position relative
+  top 6px
+
+.Noticias-index
+  #articles-list .article a
+    border-bottom none !important
+
+table, td, th, tr
+  border none !important
+
+.Sobre-index table, .Sobre-index td, .Sobre-index th
+  border 1px solid #000 !important
+
+.Sobre-index th, .Sobre-index td
+  text-align left
+  padding-left 12px
+
+.Sobre-index table > table
+  width 100% !important
+
+.page-subtitle
+  table
+    width 90% !important
+    margin 0 auto
+
+.altura-fixa
+  height auto !important
+
+.Imprensa-index
+  #articles-list .article a
+    border-bottom none !important
+
+#logo-top:after
+  content "" !important
+
+#select-documento
+  font-size 14px !important
+
+.page-subtitle
+  h2
+    color #f3922e
