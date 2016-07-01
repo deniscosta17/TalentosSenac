@@ -26,28 +26,29 @@ class HomeController extends AppController
         {
             $find = $tableParticipants->find()->where(['cpf' => $this->request->data['cpf'] ])->first();
 
-            $find->email = $this->request->data['email'];
-            $find->tel = $this->request->data['tel'];
-            $find->atualizou_seus_dados = 1;
-            $find->id_key = $key;
-            $find->key = $key;
+            if(!empty($find->id_key)) {
+                $this->checkParticipant($find);
+            } else {
+                $find->email = $this->request->data['email'];
+                $find->tel = $this->request->data['tel'];
+                $find->atualizou_seus_dados = 1;
+                $find->id_key = $key;
+                $find->key = $key;
 
+                $chaves = $tableParticipants->save($find);
 
-            $chaves = $tableParticipants->save($find);
-
-            /* $email = new Email('default');
+                $email = new Email('default');
                 $email->template('keys')
                 ->emailFormat('html')
                 ->viewVars(['dados' => $this->request->data])
                 ->to('sac@rj.senac.br')
-                ->from('denis.costa@bblender.com.br')
+                ->from($chaves->email)
                 ->subject("[Talentos Senac 2016] Fale Conosco")
-                ->send(); */
+                ->send(); 
 
-
-
-            $this->set('chaves',$chaves);
-            return $this->render("chaves");
+                $this->set('chaves',$chaves);
+                return $this->render("chaves");
+            }
         }
     }
 
@@ -55,13 +56,15 @@ class HomeController extends AppController
     {   
        if($data->id_key){
 
-            $msg =  ['message' => 'Você já esta cadastrado, anote sua chave pois será exigida no dia da prova.' ,
-                    'key' => $data->id_key,
-                    'nome' = $data->name];
+            $msg =  [
+                        'message' => 'Você já esta cadastrado, anote sua chave pois será exigida no dia da prova.',
+                        'key' => $data->id_key,
+                        'name' => $data->name
+                    ];
 
 
             $this->set('msg',$msg);        
-            return $this->render("showMessage");
+            return $this->render("showmessage");
 
        }
     }

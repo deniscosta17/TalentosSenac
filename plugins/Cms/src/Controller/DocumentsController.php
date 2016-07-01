@@ -66,7 +66,7 @@ class DocumentsController extends AppController
     public function index()
     {
         $this->set('documents', $this->paginate($this->Documents));
-        $this->set('_serialize', ['documents']);
+        // $this->set('_serialize', ['documents']);
     }
 
     /**
@@ -80,15 +80,15 @@ class DocumentsController extends AppController
         if ($this->request->is('post')) {
 
             $document = $this->Documents->patchEntity($document, $this->request->data);
-            if ($this->Documents->save($document)) {
+            if ($id = $this->Documents->save($document)->id) {
                 $this->Flash->success(__('O documento da competição foi salvo.'));
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'edit', $id]);
             } else {
                 $this->Flash->error(__('Não foi possível salvar o documento.'));
             }
         }
         $this->set(compact('document'));
-        $this->set('_serialize', ['document']);
+        // $this->set('_serialize', ['document']);
     }
 
     /**
@@ -118,7 +118,7 @@ class DocumentsController extends AppController
             }
         }
         $this->set(compact('document'));
-        $this->set('_serialize', ['document']);
+        // $this->set('_serialize', ['document']);
     }
 
     /**

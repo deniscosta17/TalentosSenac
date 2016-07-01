@@ -34,7 +34,7 @@
     <!-- Dropzone -->
     <!-- ?php echo $this->Html->css("/vendor/dropzone.min.css"); ? -->
     <!-- ?php echo $this->Html->script("/vendor/dropzone.min.js"); ? -->
-    <?php echo $this->Html->css("https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"); ?>
+    <?php echo $this->Html->script("https://rawgit.com/enyo/dropzone/master/dist/dropzone.js"); ?>
     <?php echo $this->Html->css("https://rawgit.com/enyo/dropzone/master/dist/dropzone.css"); ?>
 
     <!-- jsViews -->

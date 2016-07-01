@@ -38,11 +38,14 @@ class ArticlesController extends AppController
         $article = $this->Articles->newEntity();
         if ($this->request->is('post')) {
 
-            if(!empty($this->request->data['attachment']['error']) && $this->request->data['attachment']['error'] == 0) {
-   $this->request->data['attachment'] = $this->Upload->uploadIt("attachment");
-} else {
-   unset($this->request->data['attachment']);
-}
+            if(!empty($this->request->data['attachment']) && 
+                $this->request->data['attachment']['error'] == 0) {
+                    
+                    $this->request->data['attachment'] = $this->Upload->uploadIt("attachment");
+
+            } else {
+               unset($this->request->data['attachment']);
+            }
 
             $article = $this->Articles->patchEntity($article, $this->request->data);
             if ($this->Articles->save($article)) {
