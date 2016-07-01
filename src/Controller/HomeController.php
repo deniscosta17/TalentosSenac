@@ -37,14 +37,14 @@ class HomeController extends AppController
 
                 $chaves = $tableParticipants->save($find);
 
-                $email = new Email('default');
+               /* $email = new Email('default');
                 $email->template('keys')
                 ->emailFormat('html')
                 ->viewVars(['dados' => $this->request->data])
                 ->to('sac@rj.senac.br')
                 ->from($chaves->email)
                 ->subject("[Talentos Senac 2016] Fale Conosco")
-                ->send(); 
+                ->send(); */
 
                 $this->set('chaves',$chaves);
                 return $this->render("chaves");
