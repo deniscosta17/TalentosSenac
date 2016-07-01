@@ -3,3 +3,6 @@
 /tmp/*
 /logs/*
 /node_modules/*
+/webroot/uploads/*
+*.DS_Store
+.DS_Store
