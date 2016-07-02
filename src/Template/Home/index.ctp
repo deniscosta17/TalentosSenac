@@ -102,6 +102,7 @@
 
 
     <!-- div formulario -->
+    <?php if($formHome): ?>
     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 text-center">
 
         <div class="center-block">
@@ -112,7 +113,8 @@
 
         </div> <!-- .center-block -->
 
-      </div>
+    </div>
+  <?php endif; ?>
     <!-- div formulario fim -->
 
     <!-- Div noticias inicio ->

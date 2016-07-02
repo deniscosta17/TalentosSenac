@@ -3,8 +3,13 @@
 
 <?php $this->assign('title', 'Home'); ?>
 
+<?php
+  if($formHome)
+    $formHome = ($formHome->value == '0') ? false : true;
+?>
 <?php echo $this->Form->create($entitySettings); ?>
 <?php echo $this->Form->input("video_url", ['value' => $videoUrl, 'label' => 'URL do Vídeo']);?>
+<?php echo $this->Form->input("form_home", ['type' => 'checkbox', 'checked' => $formHome, 'label' => 'Ativar Formulário da Home?']); ?>
 <?php echo $this->Form->input("horario_fale_conosco", ['value' => $horarioFaleConosco, 'label' => 'Horário do Fale Conosco', 'type' => 'textarea', 'class' => 'ckeditor']); ?>
 <?php echo $this->Form->button("Salvar", ['class' => 'btn btn-primary']); ?>
 <?php echo $this->Form->end(); ?>

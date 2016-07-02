@@ -14,13 +14,17 @@ class HomeController extends AppController
         $tableParticipants = TableRegistry::get("Participants");
         $latestArticles = $tableArticles->getLatest(3);
 
+        $tableSettings = TableRegistry::get("Settings");
+        $formHome = $tableSettings->find()->where(['identifier' => 'form_home'])->first();
+        $formHome = ($formHome && $formHome->value == '0') ? false : true;
+
         $participantEntity = $tableParticipants->newEntity();
 
         $banners = $tableBanners->find()->all();
 
         $key = substr(md5(uniqid(rand(1,6))), 0, 16);
 
-        $this->set(compact("banners","latestArticles", "participantEntity"));
+        $this->set(compact("banners","latestArticles", "participantEntity", 'formHome'));
 
         if($this->request->is("post"))
         {
@@ -53,7 +57,7 @@ class HomeController extends AppController
     }
 
     public function checkParticipant($data)
-    {   
+    {
        if($data->id_key){
 
             $msg =  [
@@ -63,7 +67,7 @@ class HomeController extends AppController
                     ];
 
 
-            $this->set('msg',$msg);        
+            $this->set('msg',$msg);
             return $this->render("showmessage");
 
        }

@@ -97,17 +97,22 @@ class CmsController extends AppController
         $entitySettings = $tableSettings->newEntity();
         $videoUrl = $tableSettings->find()->where(['identifier' => 'video_url'])->first()->value;
         $horarioFaleConosco = $tableSettings->find()->where(['identifier' => 'horario_fale_conosco'])->first()->value;
+        $formHome = $tableSettings->find()->where(['identifier' => 'form_home'])->first();
 
-        $this->set(compact("horarioFaleConosco", "entitySettings", "videoUrl"));
+        $this->set(compact("horarioFaleConosco", "entitySettings", "videoUrl", "formHome"));
 
         if($this->request->is("post")) {
-
 
             foreach($this->request->data as $field => $value) {
 
                 $entitySettings = $tableSettings->find()->where(['identifier' => $field])->first();
-                $entitySettings->value = $value;
 
+                if(!$entitySettings)
+                    $entitySettings = $tableSettings->newEntity();
+                    $entitySettings->identifier = $field;
+                    $entitySettings->value = $value;
+
+                $entitySettings->value = $value;
                 $tableSettings->save($entitySettings);
             }
 
