@@ -64,8 +64,8 @@
 
 
     <!--
-      ######### BLOCO Noticias #########
-
+      ######### BLOCO Noticias ######### -->
+    <?php if($formHome == 0): ?>  
     <div class="col-lg-6 col-md-6 border-orange">
       <h2 class="page-title">Notícias <span class="orange-line"></span></h2>
 
@@ -94,8 +94,22 @@
         </div>
 
       </section>
-    </div>   -->
+    </div>   
 
+
+     <div class="col-lg-6 col-md-6 border-orange">
+      <h2 class="page-title" style="font-size: 26px;">Confira os Resultados <span class="blue-line"></span></h2>
+
+      <div class="text-center">
+
+       <p>Confira a lista de classificados para a Etapa Regional do Talentos Senac 2015.</p>
+
+        <a href="<?php echo $this->Url->build(['controller' => 'Resultados', 'action' => 'index']); ?>" class="btn btn-primary">Confira</a>
+      </div>
+    </div>
+
+    
+    <?php endif; ?>
     <!-- Quando a versao da home sem formulario somente com noticias
       comentar a div do formulario e descomentar a div de noticias. ->
 
@@ -117,17 +131,10 @@
   <?php endif; ?>
     <!-- div formulario fim -->
 
-    <!-- Div noticias inicio ->
-    <!-- div class="col-lg-6 col-md-6 border-orange">
-      <h2 class="page-title" style="font-size: 26px;">Confira os Resultados <span class="blue-line"></span></h2>
+  
 
-      <div class="text-center">
 
-       <p>Confira a lista de classificados para a Etapa Regional do Talentos Senac 2015.</p>
-
-        <a href="<?php echo $this->Url->build(['controller' => 'Resultados', 'action' => 'index']); ?>" class="btn btn-primary">Confira</a>
-      </div>
-    </div -->
+   
     <!-- Div noticias fim ->
 
 
