@@ -60,13 +60,13 @@
 
 <div id="content-cadastro">
   <div class="container container-geral">
-    <div class="row pos-r">
+    <div class="row pos-r equalizer">
 
 
     <!--
       ######### BLOCO Noticias ######### -->
     <?php if($formHome == 0): ?>
-    <div class="col-lg-6 col-md-6 border-orange">
+    <div class="col-lg-6 col-md-6 border-orange watch">
       <h2 class="page-title">Notícias <span class="orange-line"></span></h2>
 
       <section id="articles-list">
@@ -97,8 +97,8 @@
     </div>
 
 
-     <div class="col-lg-6 col-md-6 border-orange">
-       <h3 class="page-title">TALENTOS</h3>
+     <div class="col-lg-6 col-md-6 border-orange watch" style="border-left: 0px!important;">
+
         <p>Preencha o formulário abaixo para receber informações sobre o Senac e o Talentos.</p>
 
          <?php echo $this->Form->create($participantEntity, ['class' => 'form-informacoes form'] ); ?>
