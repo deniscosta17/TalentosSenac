@@ -10,7 +10,7 @@ class CmsController extends AppController
     public function exportar_egressos()
     {
         $rows = [
-            ['cpf', 'nome', 'email', 'atualizou_seus_dados', 'unidade', 'ocupacao', 'data_modificacao']
+            ['cpf','tel','nome', 'email', 'unidade', 'ocupacao','chave','data_modificacao']
         ];
 
         $tableParticipants = TableRegistry::get("Participants");
@@ -26,20 +26,20 @@ class CmsController extends AppController
                 $data_modificacao = null;
             }
 
-            $rows[] = [$p->cpf, utf8_decode($p->name), $p->email, $p->atualizou_seus_dados, utf8_decode($p->unidade), utf8_decode($p->ocupacao), $data_modificacao];
+            $rows[] = [$p->cpf, $p->tel ,utf8_decode($p->name), $p->email, utf8_decode($p->unidade), utf8_decode($p->ocupacao),$p->id_key ,$data_modificacao];
         }
 
-        $fp = fopen(WWW_ROOT . 'uploads' . DS . 'exportacao-egressos.csv', 'w');
+        $fp = fopen(WWW_ROOT . 'uploads' . DS . 'exportacao-egressos.xls', 'w');
 
         foreach($rows as $r)
         {
-            fputcsv($fp, $r);
+            fputcsv($fp, $r, "\t", '"');
         }
 
         fclose($fp);
 
         try {
-            $this->response->file('uploads' . DS . 'exportacao-egressos.csv', ['download' => true] );
+            $this->response->file('uploads' . DS . 'exportacao-egressos.xls', ['download' => true] );
         } catch(\Exception $e) {
             $this->Flash->error("Ocorreu um problema ao efetuar o download deste arquivo.");
 

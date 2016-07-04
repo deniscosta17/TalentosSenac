@@ -15,6 +15,6 @@
 <?php echo $this->Form->end(); ?>
 
 <div class="form">
-    <a href="<?php echo $this->Url->build(['action' => 'exportar_egressos']); ?>" class="btn btn-primary">Exportar egressos (.csv)</a>
+    <a href="<?php echo $this->Url->build(['action' => 'exportar_egressos']); ?>" class="btn btn-primary">Exportar egressos (.xls)</a>
     <a href="<?php echo $this->Url->build(['action' => 'exportar_interessados']); ?>" class="btn btn-primary">Exportar interessados (.csv)</a>
 </div>

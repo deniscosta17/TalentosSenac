@@ -83,7 +83,7 @@
         }
 
         ?></td>
-        <td>Breve descrição | Excepteur sint non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</td>
+        <td>Breve descrição |  <?php echo $a->description; ?></td>
         <td><a href="<?php echo $this->Url->build(['action' => 'download', $a->attachment]); ?>" class="btn btn-download">Download</a></td>
       </tr>
     <?php endforeach; ?>
