@@ -65,7 +65,7 @@
 
     <!--
       ######### BLOCO Noticias ######### -->
-    <?php if($formHome == 0): ?>  
+    <?php if($formHome == 0): ?>
     <div class="col-lg-6 col-md-6 border-orange">
       <h2 class="page-title">Notícias <span class="orange-line"></span></h2>
 
@@ -94,21 +94,29 @@
         </div>
 
       </section>
-    </div>   
+    </div>
 
 
      <div class="col-lg-6 col-md-6 border-orange">
-      <h2 class="page-title" style="font-size: 26px;">Confira os Resultados <span class="blue-line"></span></h2>
+       <h3 class="page-title">TALENTOS</h3>
+        <p>Preencha o formulário abaixo para receber informações sobre o Senac e o Talentos.</p>
 
-      <div class="text-center">
+         <?php echo $this->Form->create($participantEntity, ['class' => 'form-informacoes form'] ); ?>
 
-       <p>Confira a lista de classificados para a Etapa Regional do Talentos Senac 2015.</p>
 
-        <a href="<?php echo $this->Url->build(['controller' => 'Resultados', 'action' => 'index']); ?>" class="btn btn-primary">Confira</a>
-      </div>
+          <div class="form-group">
+            <?php echo $this->Form->input("name", ['label' => false, 'div' => false, 'id' => 'campo-nome', 'class' => 'form-control', 'placeholder' => 'Nome'] ); ?>
+          </div>
+
+          <div class="form-group">
+            <?php echo $this->Form->input("email", ['type' => 'text', 'label' => false, 'div' => false, 'id' => 'campo-email', 'class' => 'form-control', 'placeholder' => 'E-mail'] ); ?>
+          </div>
+
+          <button style="display:block;margin: 0 auto;" onclick="ga('send', 'event', 'Hotsite-Talentos', 'Inscricao', 'Interessados')" id="botao-cadastro" type="submit" class="btn btn-primary">Enviar</button>
+        </form> <!-- .form-cadastro -->
     </div>
 
-    
+
     <?php endif; ?>
     <!-- Quando a versao da home sem formulario somente com noticias
       comentar a div do formulario e descomentar a div de noticias. ->
@@ -131,10 +139,10 @@
   <?php endif; ?>
     <!-- div formulario fim -->
 
-  
 
 
-   
+
+
     <!-- Div noticias fim ->
 
 
