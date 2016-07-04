@@ -62,12 +62,14 @@
   <div class="container container-geral">
     <div class="row pos-r">
 
-
+       <!-- h3 class="page-title">TALENTOS</h3 -->
     <!--
       ######### BLOCO Noticias ######### -->
-    <?php if($formHome == 0): ?>
-    <div class="col-lg-6 col-md-6 border-orange">
-      <h2 class="page-title">Notícias <span class="orange-line"></span></h2>
+    <?php if(!$formHome): ?>
+
+    <h4 class="page-title">Notícias <span class="orange-line"></span></h4>
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 border-orange">
+      
 
       <section id="articles-list">
 
@@ -94,26 +96,6 @@
         </div>
 
       </section>
-    </div>
-
-
-     <div class="col-lg-6 col-md-6 border-orange">
-       <h3 class="page-title">TALENTOS</h3>
-        <p>Preencha o formulário abaixo para receber informações sobre o Senac e o Talentos.</p>
-
-         <?php echo $this->Form->create($participantEntity, ['class' => 'form-informacoes form'] ); ?>
-
-
-          <div class="form-group">
-            <?php echo $this->Form->input("name", ['label' => false, 'div' => false, 'id' => 'campo-nome', 'class' => 'form-control', 'placeholder' => 'Nome'] ); ?>
-          </div>
-
-          <div class="form-group">
-            <?php echo $this->Form->input("email", ['type' => 'text', 'label' => false, 'div' => false, 'id' => 'campo-email', 'class' => 'form-control', 'placeholder' => 'E-mail'] ); ?>
-          </div>
-
-          <button style="display:block;margin: 0 auto;" onclick="ga('send', 'event', 'Hotsite-Talentos', 'Inscricao', 'Interessados')" id="botao-cadastro" type="submit" class="btn btn-primary">Enviar</button>
-        </form> <!-- .form-cadastro -->
     </div>
 
 

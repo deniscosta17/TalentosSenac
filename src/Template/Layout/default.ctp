@@ -95,11 +95,11 @@
     <header id="header">
 
      <!-- #logo-top -->
-
     <div class="container">
-      <a id="logo-top" href="<?php echo $this->Url->build(['controller' => 'home', 'action' => 'index']); ?>" title="Talentos Senac 2015">
-        <img class="show-for-medium-up" style="margin-top: -21px;" src="<?php echo $this->Url->build('/img/Logo.png'); ?>" width="320">
+      <a id="logo-top" href="/" title="Talentos Senac 2016">
+        <img src="<?php echo $this->Url->build('/img/Logo.png'); ?>" width="320">
       </a>
+
       <div class="row">
           <div class="col-lg-12">
             <nav id="main-navbar">
