@@ -1104,16 +1104,13 @@ tr {
 @media only screen and (max-width:1280px) {
   #content-cadastro{
     background: url('../img/bg-cadastro-1280.jpg') no-repeat top center!important;
-
   }
 }
 @media only screen and (max-width:1024px) {
 
   #content-cadastro{
     background: url('../img/bg-cadastro-1024.png') no-repeat top center!important;
-
   }
-
 }
 @media only screen and (max-width:768px) {
   #selo-senac {
