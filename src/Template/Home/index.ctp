@@ -60,7 +60,7 @@
 
 <div id="content-cadastro">
   <div class="container container-geral">
-    <div class="row pos-r">
+    <div class="row pos-r equalizer">
 
        <!-- h3 class="page-title">TALENTOS</h3 -->
     <!--
@@ -69,7 +69,6 @@
 
     <h4 class="page-title">Notícias <span class="orange-line"></span></h4>
     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 border-orange">
-      
 
       <section id="articles-list">
 

@@ -51,8 +51,8 @@ class ContatoController extends AppController
             $email->template('fale_conosco')
                 ->emailFormat('html')
                 ->viewVars(['dados' => $this->request->data])
-                ->to('deniscosta17@gmail.com')
-                ->from('denis.costa@bblender.com.br')
+                ->to($this->request->data['email'])
+                ->from($this->request->data['email'])
                 //->from('nao-responda@rj.senac.br')
                 ->subject("[Talentos Senac 2016] Fale Conosco")
                 ->send();
