@@ -26,13 +26,7 @@ the setup traffic lights.
 2. Read and edit `config/app.php` and setup the 'Datasources' and any other configuration relevant for your application.
 
 3. Add frist data in tables 
-	- Admins   ![Alt text](https://i.imgsafe.org/833dd0a7e7.png "Optional title")
-	- Banners  ![Alt text](https://i.imgsafe.org/833de4a3b6.png "Optional title")
-	- Pages    ![Alt text](https://i.imgsafe.org/833e043f97.png "Optional title")
-	- Settings [![Alt text](https://i.imgsafe.org/833e224f57.png "Optional title")
-
-
-
-
-
-
+	- Admins   ![Alt text](http://www.bblender.com.br/new_2/cms/admin.png "Optional title")
+	- Banners  ![Alt text](http://www.bblender.com.br/new_2/cms/banners.png "Optional title")
+	- Pages    ![Alt text](http://www.bblender.com.br/new_2/cms/pages.png "Optional title")
+	- Settings [![Alt text](http://www.bblender.com.br/new_2/cms/settings.png "Optional title")
